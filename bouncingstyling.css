@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+     align-items: center; 
+     justify-content: center; 
+    flex-direction: column;
+}
+
+.ball{
+    height: 120px;
+    width: 120px;
+    background-color: blue;
+    border-radius: 100%;
+    animation: bouncing 4s linear infinite;
+
+}
+
+
+.line{
+    height: 20px;
+    width: 400px;
+    background-color: black;
+    border-radius: 30px;
+    animation: run 4s linear infinite alternate;
+}
+@keyframes bouncing {
+   0%{
+         transform: translateY(0);
+   } 
+  50% {
+        transform: translateY(-200px);
+   }
+}
+
+@keyframes run {
+    from {
+        transform: translateX(200px);
+        
+    }
+
+    to {
+        transform: translateX(-200px);
+    }
+
+
+}
